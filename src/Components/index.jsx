@@ -1,6 +1,6 @@
-import Header from './Header';
-import Footer from './Footer';
-import Home from './Home';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Home from './Home/Home';
 import CakeDesign from './CakeDesign/CakeDesign';
 import Display from './Display/Display';
 
