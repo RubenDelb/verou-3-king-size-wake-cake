@@ -1,13 +1,14 @@
-import React from 'react'
-import Circle from '../Circle/Circle'
-import Square from '../Square/Square'
+import Square from "./Square/Square";
+import Circle from "./Circle/Circle";
+
+import './CakeDesign.scss';
 
 
 const CakeDesign = () => {
     return (
         <div>
-        <Square />
-        <Circle />
+            <Square />
+            <Circle />
         </div>
     )
 }
