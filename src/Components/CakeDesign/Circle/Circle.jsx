@@ -2,7 +2,7 @@ import './Circle.scss'
 
 const Circle = () => {
   return (
-    <div>Circle</div>
+    <div className='circle-shape'>Circle</div>
   )
 }
 
