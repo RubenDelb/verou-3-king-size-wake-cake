@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Header, Footer, Home, CakeDesign, Display, Carousel } from './Components';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
 
       <Routes>
