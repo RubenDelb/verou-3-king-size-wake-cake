@@ -37,7 +37,7 @@ const Carousel = () => {
                             <motion.div className="item" key={image.name}> 
                                 <img src={image.src} alt="" />
                             </motion.div>
-                            <motion.h1 animate={{ y:50 }} >{image.name}</motion.h1>
+                            <motion.h1 >{image.name}</motion.h1>
                         </>
                     );
                 })}
