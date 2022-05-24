@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Header, Footer, Home, CakeDesign, Display, Carousel } from './components';
 import { Routes, Route } from 'react-router-dom';
+import Customize from './components/Customize/Customize';
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/customize" element={<h1>Customize</h1>} />
+        <Route path="/customize" element={<Customize />} />
         <Route path="/checkout" element={<h1>Checkout</h1>} />
       </Routes>
 
