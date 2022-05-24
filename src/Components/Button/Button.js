@@ -1,6 +1,8 @@
+import './Button.scss';
+
 const Button = ({ btnName, onClick }) => {
     return (
-        <button>{ btnName }</button>
+        <button className="button">{ btnName }</button>
     )
 }
 
