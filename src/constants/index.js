@@ -1,2 +1,2 @@
-export { default as images } from './images';
+export { default as ingredients } from './ingredients';
 export { default as completeImages } from './completeImages';
