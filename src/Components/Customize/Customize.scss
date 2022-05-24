@@ -1,0 +1,21 @@
+.customize {
+    display: flex;
+
+    .image-container {
+        flex: 1;
+        padding: 40px;
+
+        .inner-image-container {
+            max-height: 500px;
+            max-width: 500px;
+            position: relative;
+
+
+        }
+    }
+
+    .checkboxes-container {
+        flex: 1;
+    }
+}
+
