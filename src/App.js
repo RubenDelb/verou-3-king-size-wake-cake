@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { Header, Footer, Home, CakeDesign, Display, Carousel } from './Components';
+import { Header, Footer, Home, CakeDesign, Display, Carousel } from './components';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cakedesign" element={<CakeDesign />} />
-        <Route path="/display-cake" element={<Display />} />
+        <Route path="/customize" element={<h1>Customize</h1>} />
+        <Route path="/checkout" element={<h1>Checkout</h1>} />
       </Routes>
 
       <Footer />
