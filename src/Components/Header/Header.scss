@@ -1,4 +1,11 @@
 .header {
     padding: 10px 50px;
-    background-color:darkslategrey;
+    background-color:#336124;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #b09e75;
 }
