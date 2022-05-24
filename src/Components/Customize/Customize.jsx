@@ -65,6 +65,9 @@ const Customize = ( { ingredients, setIngredients } ) => {
                     </>
                 )
             })}
+            <button onClick={() => navigate('/checkout')}>
+                Checkout!
+            </button>
         </div>
     </div>
   )
