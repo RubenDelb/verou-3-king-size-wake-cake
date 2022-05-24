@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
-import { Header, Footer, Home } from './components';
+import { Header, Footer, Home } from './Components';
 import { Routes, Route } from 'react-router-dom';
-import Customize from './components/Customize/Customize';
-import Checkout from './components/Checkout/Checkout';
+import Customize from './Components/Customize/Customize';
+import Checkout from './Components/Checkout/Checkout';
 
 const App = () => {
   const [ingredients, setIngredients] = useState({
