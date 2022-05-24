@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '../Button/Button';
 import './Checkout.scss';
 
 const Checkout = ({ ingredients }) => {
@@ -33,12 +34,8 @@ const Checkout = ({ ingredients }) => {
               </ul>
             </>
           }
-          <button onClick={() => setSuccess(true)}>
-            Confirm
-          </button>
-          <button onClick={() => navigate('/customize')}>
-            Go Back
-          </button>
+          <Button btnName='Confirm' onClick={() => setSuccess(true)}/>
+          <Button btnName='Go Back' onClick={() => navigate('/customize')}/>
         </div>
       </div>
     </div>

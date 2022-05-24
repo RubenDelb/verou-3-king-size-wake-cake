@@ -2,6 +2,7 @@ import './Customize.scss';
 import { ingredientsImages } from '../../constants';
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router-dom";
+import Button from '../Button/Button';
 
 const Customize = ( { ingredients, setIngredients } ) => {
     let navigate = useNavigate();
@@ -65,9 +66,7 @@ const Customize = ( { ingredients, setIngredients } ) => {
                     </>
                 )
             })}
-            <button onClick={() => navigate('/checkout')}>
-                Checkout!
-            </button>
+            <Button btnName='Checkout!' onClick={() => navigate('/checkout')}/>
         </div>
     </div>
   )
