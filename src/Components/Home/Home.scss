@@ -1,0 +1,18 @@
+.home {
+    text-align: center;
+    background-color: #faefde;
+}
+
+.howTo {
+    border: 2px solid black;
+    width: 50%;
+    margin: 15px 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .howTo {
+        img {
+            max-width: 50%;
+        }
+    }
+}
