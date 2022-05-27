@@ -2,8 +2,9 @@
     display: flex;
 
     .image-container {
-        flex: 1;
+        flex: auto;
         padding: 40px;
+        height: 550px;
 
         .inner-image-container {
             max-height: 500px;
@@ -12,7 +13,6 @@
 
             .ingredients {
                 position: absolute;
-                margin-top: -100px;
             }
 
             .z1 {
@@ -103,6 +103,21 @@
     @media screen and (max-width: 900px) {
         display: flex;
         flex-direction: column;
+        .image-container {
+            height: 500px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .image-container {
+            height: 400px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .image-container {
+            height: 300px;
+        }
     }
 }
 
