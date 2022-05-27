@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.scss';
 import { Header, Footer, Home } from './Components';
 import { Routes, Route } from 'react-router-dom';
-import Customize from './Components/Customize/Customize';
-import Checkout from './Components/Checkout/Checkout';
+import { CustomBase, CustomCheese, CustomRemarks, CustomSauce, CustomTopping } from './Components/Customisation';
+import Checkout from './Components/Checkout/Checkout'
 
 const App = () => {
   const [ingredients, setIngredients] = useState({
@@ -28,7 +28,11 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/customize" element={<Customize ingredients={ ingredients } setIngredients={ setIngredients }/>} />
+        <Route path="/custombase" element={<CustomBase ingredients={ ingredients } setIngredients={ setIngredients }/>} />
+        <Route path="/customsauce" element={<CustomSauce ingredients={ ingredients } setIngredients={ setIngredients }/>} />
+        <Route path="/customtopping" element={<CustomTopping ingredients={ ingredients } setIngredients={ setIngredients }/>} />
+        <Route path="/customcheese" element={<CustomCheese ingredients={ ingredients } setIngredients={ setIngredients }/>} />
+        <Route path="/customremarks" element={<CustomRemarks ingredients={ ingredients } setIngredients={ setIngredients }/>} />
         <Route path="/checkout" element={<Checkout ingredients={ingredients} />} />
       </Routes>
 
