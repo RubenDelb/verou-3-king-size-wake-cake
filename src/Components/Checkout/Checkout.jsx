@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Checkout.scss';
 
-const Checkout = ({ ingredients }) => {
+const Checkout = () => { 
+  
+  // TODO: get ingredients from localstorage
+
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
 
@@ -21,7 +24,7 @@ const Checkout = ({ ingredients }) => {
                 My Ingredients:
               </h1>
               <ul>
-                { Object.keys(ingredients).map((ingredient) => {
+                {/* { Object.keys(ingredients).map((ingredient) => {
                   return (
                     ingredients[ingredient] && (
                       <li>
@@ -30,7 +33,7 @@ const Checkout = ({ ingredients }) => {
                       </li>
                     )
                   )
-                }) }
+                }) } */}
               </ul>
             </>
           }
