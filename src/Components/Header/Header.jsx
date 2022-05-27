@@ -10,7 +10,7 @@ const Header = () => {
             <img src={Logo} alt="" />
             <div>
                 <Link to={"/"}><Button btnName={'Home'} /></Link>
-                <Link to="/customize"><Button btnName={'Customize Pizza'} /></Link>
+                <Link to="/custombase"><Button btnName={'Customize Pizza'} /></Link>
                 {/* <Link to="/AddRecipe"><Button btnName={'Get Inspire'} /></Link> */}
             </div>
         </div>
