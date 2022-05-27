@@ -1,12 +1,13 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import Logo from "../../assets/logo/pizzaverse.png"
 
 const Header = () => {
     return (
         <>
         <div className='header'>
-            <h1 className='title'>Custom Pizza</h1>
+            <img src={Logo} alt="" />
             <div>
                 <Link to={"/"}><Button btnName={'Home'} /></Link>
                 <Link to="/customize"><Button btnName={'Customize Pizza'} /></Link>
