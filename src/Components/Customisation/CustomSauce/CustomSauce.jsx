@@ -1,4 +1,5 @@
-import 'CustomSauce.scss';
+import AppWrap from '../../AppWrap';
+import './CustomSauce.scss';
 
 const CustomSauce = () => {
     return (
@@ -6,4 +7,4 @@ const CustomSauce = () => {
     )
 }
 
-export default CustomSauce
+export default AppWrap(CustomSauce, 'sauce')
