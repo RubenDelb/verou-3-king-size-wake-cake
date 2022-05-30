@@ -1,8 +1,8 @@
-import Base from "../../assets/home-img/base.png";
-import Sauce from "../../assets/home-img/sauce.png";
-import Topping from "../../assets/home-img/topping.png";
-import SayCheese from "../../assets/home-img/saycheese.png";
-import Notes from "../../assets/home-img/notes.png";
+import Base from "../../assets/home-img/base.webp";
+import Sauce from "../../assets/home-img/sauce.webp";
+import Topping from "../../assets/home-img/topping.webp";
+import SayCheese from "../../assets/home-img/saycheese.webp";
+import Notes from "../../assets/home-img/notes.webp";
 
 export {
     Base,
