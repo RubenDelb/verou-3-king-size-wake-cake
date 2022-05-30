@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Button from '../../Button/Button';
 import AppWrap from '../../AppWrap';
 import { useEffect, useState } from 'react';
+import CustomLayout from '../Layout/ImageContainer';
+import CustomCheckmarks from '../Layout/CheckmarksContainer';
+import ImageContainer from '../Layout/ImageContainer';
+import CheckmarksContainer from '../Layout/CheckmarksContainer';
 
 const CustomTopping = () => {
     const [ingredients, setIngredients] = useState({
@@ -17,9 +21,9 @@ const CustomTopping = () => {
     });
 
     useEffect(() => {
-        const data = localStorage.getItem("ingredients");
+        const data = JSON.parse(localStorage.getItem("ingredients"));
         if (data) {
-        setIngredients(JSON.parse(data));
+        setIngredients(data);
         }
     }, []);
 
@@ -31,31 +35,28 @@ const CustomTopping = () => {
     };
 
     return (
-        <div className='customize'>
-            <div className='image-container'>
-                <div className='inner-image-container'>
-                    {ingredientsImages.map((ingredient) => {
-                        return (
-                            <>
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        y: ingredients[ingredient.name] ? 0 : -200,
-                                        opacity: ingredients[ingredient.name] ? 1 : 0,
-                                    }}
-                                    transition={{ duration: 1 }}
-                                    className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
-                                    key={ingredient.name}
-                                >
-                                    <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
-                                </motion.div>
-                            </>
-                        )
-                    })}
-                </div>
-            </div>
-
-            <div className='checkboxes-container'>
+        <>
+            <ImageContainer>
+                {ingredientsImages.map((ingredient) => {
+                    return (
+                        <>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    y: ingredients[ingredient.name] ? 0 : -200,
+                                    opacity: ingredients[ingredient.name] ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
+                                className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
+                                key={ingredient.name}
+                            >
+                                <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
+                            </motion.div>
+                        </>
+                    )
+                })}
+            </ImageContainer>    
+            <CheckmarksContainer>
                 {ingredientsImages.map((ingredient) => {
                     return (
                         <>
@@ -75,8 +76,8 @@ const CustomTopping = () => {
                         </>
                     )
                 })}
-            </div>
-        </div>
+            </CheckmarksContainer>
+        </>
     )
 }
 
