@@ -1,7 +1,7 @@
-import CurrySauce from '../assets/Sauce/curry.png';
-import PestoSauce from '../assets/Sauce/pesto.png';
-import TomatoSauce from '../assets/Sauce/tomato.png';
-import SpicySauce from '../assets/Sauce/spicy.png'
+import CurrySauce from '../assets/Sauce/curry.webp';
+import PestoSauce from '../assets/Sauce/pesto.webp';
+import TomatoSauce from '../assets/Sauce/tomato.webp';
+import SpicySauce from '../assets/Sauce/spicy.webp'
 
 export default [
     { src: CurrySauce, name: "curry", zIndex: "z2" },

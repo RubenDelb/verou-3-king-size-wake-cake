@@ -1,11 +1,11 @@
-import Basil from '../assets/Topping/Basil.png';
-import Mushroom from '../assets/Topping/Mushroom.png';
-import Olive from '../assets/Topping/Olive.png';
-import Pineapple from '../assets/Topping/Pineapple.png';
-import Tomato from '../assets/Topping/Tomato.png';
-import Broccoli from '../assets/Topping/broccolis.png';
-import Carrot from '../assets/Topping/carrots.png';
-import Eggplant from '../assets/Topping/eggplants.png';
+import Basil from '../assets/Topping/Basil.webp';
+import Mushroom from '../assets/Topping/Mushroom.webp';
+import Olive from '../assets/Topping/Olive.webp';
+import Pineapple from '../assets/Topping/Pineapple.webp';
+import Tomato from '../assets/Topping/Tomato.webp';
+import Broccoli from '../assets/Topping/broccolis.webp';
+import Carrot from '../assets/Topping/carrots.webp';
+import Eggplant from '../assets/Topping/eggplants.webp';
 
 export default [
     { src: Basil, name: "basil", zIndex: "z5"},
