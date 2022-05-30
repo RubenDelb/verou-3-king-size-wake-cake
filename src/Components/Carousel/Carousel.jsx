@@ -34,10 +34,10 @@ const Carousel = () => {
                 {completeImages.map((image) => {
                     return(
                         <>
-                            <motion.div className="item" key={image.name}> 
+                            <div className="item" key={image.name}> 
                                 <img src={image.src} alt="" />
-                            </motion.div>
-                            <motion.h1 >{image.name}</motion.h1>
+                            </div>
+                            <h1>{image.name}</h1>
                         </>
                     );
                 })}
