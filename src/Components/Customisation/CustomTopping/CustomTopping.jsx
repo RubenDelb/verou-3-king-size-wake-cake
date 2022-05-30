@@ -61,7 +61,8 @@ const CustomTopping = () => {
                     return (
                         <>
                             { ingredient.name === "pizzabase" ? "" : (
-                                <label className="container-checkbox">
+                                <label className="container-checkbox" for={ingredient.name}>
+                                    <img src={ingredient.src} alt={ingredient.name} height="15%" width="15%" />
                                     {ingredient.name}
                                     <input
                                         type="checkbox"
@@ -69,6 +70,7 @@ const CustomTopping = () => {
                                         onChange={(event) =>
                                             onChange(event.currentTarget.checked, ingredient.name)
                                         }
+                                        id={ingredient.name}
                                     />
                                     <span className="checkmark"></span>
                                 </label>
