@@ -16,8 +16,6 @@ const CustomTopping = () => {
         tomato: false,
     });
 
-    console.log(ingredients);
-
     useEffect(() => {
         const data = localStorage.getItem("ingredients");
         if (data) {
@@ -25,11 +23,7 @@ const CustomTopping = () => {
         }
     }, []);
 
-
-    console.log(ingredients);
-
     const onChange = (event, name) => {
-        console.log(localStorage);
         let newIngredients = JSON.parse(JSON.stringify(ingredients));
         newIngredients[name] = event;
         setIngredients(newIngredients);
