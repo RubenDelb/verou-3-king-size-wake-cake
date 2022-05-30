@@ -4,7 +4,9 @@ import NavigationDots from "./NavigationDots"
 const AppWrap = (Component, idName) => function HOC() {
     return (
         <div id={idName} className={`app__container`}>
-            <Component />
+            <div class="customize">
+                <Component />
+            </div>
             <NavigationDots active={idName} />
         </div>
     )
