@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import AppWrap from '../../AppWrap';
 import Button from '../../Button/Button';
 import NavigationDots from '../../NavigationDots';
 import './CustomRemarks.scss';
