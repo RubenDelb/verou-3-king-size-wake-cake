@@ -1,39 +1,17 @@
-import AppWrap from '../../AppWrap'
 import './CustomBase.scss'
 import { motion } from 'framer-motion';
 import baseImages from '../../../constants/baseImages';
-import ImageContainer from '../Layout/ImageContainer';
-import CheckmarksContainer from '../Layout/CheckmarksContainer';
-import { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
 import NavigationDots from '../../NavigationDots';
 
 
 const CustomBase = ({idName}) => {
-    const [bases, setBases] = useState({
-        emptybase: false,
-    });
+    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
 
-    const {pizzas, setPizzas} = useContext(PizzaContext);
-
-    useEffect(() => {
-        const data = localStorage.getItem("bases");
-        if (data) {
-        setBases(JSON.parse(data));
-        }
-    }, []);
-
-    const onChange = (event, name) => {
-        let newBases = JSON.parse(JSON.stringify(bases));
-        newBases[name] = event;
-        setBases(newBases);
-        localStorage.setItem("bases", JSON.stringify(newBases));
-        let newPizza = pizzas;
-        newPizza[name] = event;
-        setPizzas(newPizza);
-        console.log(pizzas);
-    };
+    setTimeout(() => {
+        localStorageSaver()
+    }, 1000);
 
     return (
         <>
@@ -45,14 +23,14 @@ const CustomBase = ({idName}) => {
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{
-                                y: bases[base.name] ? 0 : -200,
-                                opacity: bases[base.name] ? 1 : 0,
+                                y: pizzas[base.name] ? 0 : -200,
+                                opacity: pizzas[base.name] ? 1 : 0,
                             }}
                             transition={{ duration: 1 }}
                             className={`ingredients ${base.zIndex} ${base.name}`}
                             key={base.name}
                         >
-                            <ImageContainer src={base.src} alt={base.name} />
+                            <img src={base.src} alt={base.name} height="100%" width="100%" />
                     </motion.div>
 
                     )
@@ -69,10 +47,9 @@ const CustomBase = ({idName}) => {
                                     {base.name}
                                     <input
                                         type="checkbox"
-                                        checked={bases[base.name]}
-                                        onChange={(event) =>
-                                            onChange(event.currentTarget.checked, base.name)
-                                        }
+                                        checked={ pizzas[base.name] } 
+                                        id={base.name}
+                                        onChange={ toggleIngredients }
                                         // onClick={() => addPizza(base)}
                                     />
                                     <span className="checkmark"></span>
