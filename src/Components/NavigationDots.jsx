@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavigationDots = ({ active }) => {
   return (
-    <div className='app__navigation'>
+    <div className='navigation'>
       {['base', 'sauce', 'topping', 'cheese', 'remarks' ].map((item, index) => (
-        <a 
-          href={`/custom${item}`}
+        <Link 
+          to={`/custom${item}`}
           key={item + index}
-          className="app__navigation-dot" 
+          className="navigation-dot" 
           style={active === item ? { backgroundColor: '#FD6F3B' } : {} } 
-        > {index} </a>
+        >{index + 1}</Link>
       ))}
 
     </div>
