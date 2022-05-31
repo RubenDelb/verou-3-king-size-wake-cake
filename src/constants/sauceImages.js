@@ -6,6 +6,6 @@ import SpicySauce from '../assets/Sauce/spicy.webp'
 export default [
     { src: CurrySauce, name: "curry", zIndex: "z2" },
     { src: PestoSauce, name: "pesto", zIndex: "z2" },
-    { src: TomatoSauce, name: "tomato", zIndex: "z2" },
+    { src: TomatoSauce, name: "tomatoSauce", zIndex: "z2" },
     { src: SpicySauce, name: "spicy", zIndex: "z2" },
 ]
