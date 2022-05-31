@@ -23,17 +23,25 @@ export function PizzaProvider({children}){
 
     useEffect(() => {
         const data = localStorage.getItem("pizzas");
-        if (data) {
-        setPizzas(JSON.parse(data));
-        }
+        data ?
+            setPizzas(JSON.parse(data))
+        :
+            localStorage.setItem("pizzas", JSON.stringify(pizzas))
     }, []);
 
-    useEffect(() => {
-        localStorage.setItem("pizzas", JSON.stringify(pizzas))
-    }, [pizzas])
+    const localStorageSaver = () => {
+        localStorage.setItem("pizzas", JSON.stringify(pizzas));
+    }
+
+    const toggleIngredients = (e) => {
+        const id = e.target.id;
+        const checked = e.target.checked;
+        console.log(e.target.checked);
+        setPizzas(prevValue => ({ ...prevValue, [id]: checked }));
+    };
 
     return (
-        <PizzaContext.Provider value={{pizzas, setPizzas}}>
+        <PizzaContext.Provider value={{pizzas, toggleIngredients, localStorageSaver}}>
             {children}
         </PizzaContext.Provider>
     )
