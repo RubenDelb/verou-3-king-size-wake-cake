@@ -5,11 +5,17 @@ import baseImages from '../../../constants/baseImages';
 import ImageContainer from '../Layout/ImageContainer';
 import CheckmarksContainer from '../Layout/CheckmarksContainer';
 import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import PizzaContext from '../../../PizzaContext';
+import NavigationDots from '../../NavigationDots';
 
-const CustomBase = () => {
+
+const CustomBase = ({idName}) => {
     const [bases, setBases] = useState({
         emptybase: false,
     });
+
+    const {pizzas, setPizzas} = useContext(PizzaContext);
 
     useEffect(() => {
         const data = localStorage.getItem("bases");
@@ -23,11 +29,17 @@ const CustomBase = () => {
         newBases[name] = event;
         setBases(newBases);
         localStorage.setItem("bases", JSON.stringify(newBases));
+        let newPizza = pizzas;
+        newPizza[name] = event;
+        setPizzas(newPizza);
+        console.log(pizzas);
     };
 
     return (
         <>
-            <ImageContainer>
+        <div className="customize">
+            <div className='image-container'>
+            <div className='inner-image-container'>
                 { baseImages.map((base) => {
                     return (
                         <motion.div
@@ -40,14 +52,15 @@ const CustomBase = () => {
                             className={`ingredients ${base.zIndex} ${base.name}`}
                             key={base.name}
                         >
-                            <img src={base.src} alt={base.name} height="100%" width="100%" />
+                            <ImageContainer src={base.src} alt={base.name} />
                     </motion.div>
 
                     )
                 })}
-            </ImageContainer>
+            </div>
+            </div>
 
-            <CheckmarksContainer>
+                <div className='checkboxes-container'>
                 { baseImages.map((base) => {
                     return (
                         <>
@@ -60,6 +73,7 @@ const CustomBase = () => {
                                         onChange={(event) =>
                                             onChange(event.currentTarget.checked, base.name)
                                         }
+                                        // onClick={() => addPizza(base)}
                                     />
                                     <span className="checkmark"></span>
                                 </label>
@@ -67,10 +81,12 @@ const CustomBase = () => {
                         </>
                     )
                 })}
-            </CheckmarksContainer>
+            </div>
+        </div>
+        <NavigationDots active={idName} />
         </>
-        
+
     )
 }
 
-export default AppWrap(CustomBase, 'base');
+export default CustomBase;

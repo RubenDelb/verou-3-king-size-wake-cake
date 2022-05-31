@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 import CheckmarksContainer from '../Layout/CheckmarksContainer';
 import ImageContainer from '../Layout/ImageContainer';
 import './CustomCheese.scss';
+import NavigationDots from '../../NavigationDots';
+import { useContext } from 'react';
+import PizzaContext from '../../../PizzaContext';
 
-const CustomCheese = () => {
+const CustomCheese = ({idName}) => {
     const [cheeses, setCheeses] = useState({
         cheese: false,
     });
@@ -28,7 +31,9 @@ const CustomCheese = () => {
 
     return (
         <>
-            <ImageContainer>
+        <div className="customize">
+            <div className='image-container'>
+            <div className='inner-image-container'>
                 { cheeseImages.map((cheese) => {
                     return (
                         <motion.div
@@ -41,13 +46,14 @@ const CustomCheese = () => {
                             className={`ingredients ${cheese.zIndex} ${cheese.name}`}
                             key={cheese.name}
                         >
-                            <img src={cheese.src} alt={cheese.name} height="100%" width="100%" />
+                            <ImageContainer src={cheese.src} alt={cheese.name} height="100%" width="100%" />
                         </motion.div>
                     )
                 })}
-            </ImageContainer>
+            </div>
+            </div>
 
-            <CheckmarksContainer>
+            <div className='checkboxes-container'>
                 {cheeseImages.map((cheese) => {
                     return (
                         <>
@@ -66,9 +72,11 @@ const CustomCheese = () => {
                         </>
                     )
                 })}
-            </CheckmarksContainer>
+            </div>
+        </div>
+        <NavigationDots active={idName} />
         </>
     )
 }
 
-export default AppWrap(CustomCheese, 'cheese')
+export default CustomCheese;

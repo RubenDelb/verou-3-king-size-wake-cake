@@ -5,21 +5,33 @@ import CheckmarksContainer from '../Layout/CheckmarksContainer';
 import ImageContainer from '../Layout/ImageContainer';
 import './CustomSauce.scss';
 import { useEffect, useState } from 'react';
+import NavigationDots from '../../NavigationDots';
+import { useContext } from 'react';
+import PizzaContext from '../../../PizzaContext';
 
-const CustomSauce = () => {
+const CustomSauce = ({idName}) => {
     const [sauces, setSauces] = useState({
         curry: false,
         pesto: false,
-        tomato: false,
+        tomatoSauce: false,
         spicy: false
     });
+
+    const [prevPizza, setPrevPizza] = useState ({})
+
+    useEffect(() => {
+        setPrevPizza(pizzas)
+        console.log('Hello');
+    }, [])
 
     const [replicaSauces, setReplicaSauces] = useState({
         curry: false,
         pesto: false,
-        tomato: false,
+        tomatoSauce: false,
         spicy: false
     });
+
+    const {pizzas, setPizzas} = useContext(PizzaContext);
 
     useEffect(() => {
         const data = localStorage.getItem("sauces");
@@ -33,12 +45,17 @@ const CustomSauce = () => {
         newSauces[name] = event;
         setSauces(newSauces);
         localStorage.setItem("sauces", JSON.stringify(newSauces));
+        prevPizza[name] = event;
+        setPizzas(prevPizza);
+        console.log(pizzas);
     };
 
 
     return (
         <>
-            <ImageContainer>
+        <div className="customize">
+            <div className='image-container'>
+            <div className='inner-image-container'>
                 {sauceImages.map((sauce) => {
                     return (
                         <>
@@ -52,13 +69,15 @@ const CustomSauce = () => {
                                 className={`ingredients ${sauce.zIndex} ${sauce.name}`}
                                 key={sauce.name}
                             >
-                                <img src={sauce.src} alt={sauce.name} height="100%" width="100%" />
+                                <ImageContainer src={sauce.src} alt={sauce.name} />
                             </motion.div>
                         </>
                     )
                 })}
-            </ImageContainer>
-            <CheckmarksContainer>
+            </div>
+            </div>
+
+            <div className='checkboxes-container'>
                 {sauceImages.map((sauce) => {
                     return (
                         <>
@@ -77,9 +96,11 @@ const CustomSauce = () => {
                         </>
                     )
                 })}
-            </CheckmarksContainer>
+            </div>
+        </div>
+        <NavigationDots active={idName} />
         </>
     )
 }
 
-export default AppWrap(CustomSauce, 'sauce')
+export default CustomSauce;

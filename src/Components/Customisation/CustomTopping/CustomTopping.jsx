@@ -9,15 +9,20 @@ import CustomLayout from '../Layout/ImageContainer';
 import CustomCheckmarks from '../Layout/CheckmarksContainer';
 import ImageContainer from '../Layout/ImageContainer';
 import CheckmarksContainer from '../Layout/CheckmarksContainer';
+import NavigationDots from '../../NavigationDots';
+import { useContext } from 'react';
+import PizzaContext from '../../../PizzaContext';
 
-const CustomTopping = () => {
+const CustomTopping = ({idName}) => {
     const [ingredients, setIngredients] = useState({
         basil: false,
-        cheese: false,
         mushroom: false,
         olive: false,
         pineapple: false,
         tomato: false,
+        brocoli: false,
+        eggplant: false,
+        carrot: false,
     });
 
     useEffect(() => {
@@ -36,7 +41,9 @@ const CustomTopping = () => {
 
     return (
         <>
-            <ImageContainer>
+        <div className="customize">
+            <div className='image-container'>
+            <div className='inner-image-container'>
                 {ingredientsImages.map((ingredient) => {
                     return (
                         <>
@@ -50,13 +57,15 @@ const CustomTopping = () => {
                                 className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
                                 key={ingredient.name}
                             >
-                                <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
+                                <ImageContainer src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
                             </motion.div>
                         </>
                     )
                 })}
-            </ImageContainer>    
-            <CheckmarksContainer>
+            </div>    
+            </div>
+
+            <div className='checkboxes-container'>
                 {ingredientsImages.map((ingredient) => {
                     return (
                         <>
@@ -78,9 +87,11 @@ const CustomTopping = () => {
                         </>
                     )
                 })}
-            </CheckmarksContainer>
+            </div>
+        </div>
+        <NavigationDots active={idName} />
         </>
     )
 }
 
-export default AppWrap(CustomTopping, 'topping')
+export default CustomTopping;
