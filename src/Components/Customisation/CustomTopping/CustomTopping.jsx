@@ -49,7 +49,7 @@ const CustomTopping = ({idName}) => {
                                     <input
                                         type="checkbox"
                                         checked={ pizzas[ingredient.name] }
-                                        onChange={ toggleIngredients }
+                                        onChange={ (event) => toggleIngredients(event) }
                                         id={ingredient.name}
                                     />
                                     <span className="checkmark"></span>
