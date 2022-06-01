@@ -153,3 +153,20 @@
     }
 }
 
+.navigation {
+    margin: 10px 20%;
+    display: flex;
+    justify-content: space-around;
+
+    .navigation-dot {
+        padding: 0 5px;
+        text-decoration: none;
+        text-align: center;
+        color: #0d0628;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

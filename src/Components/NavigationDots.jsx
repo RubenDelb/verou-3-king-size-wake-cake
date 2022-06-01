@@ -1,17 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import stepsImages from '../constants/stepsImages'
 
 const NavigationDots = ({ active }) => {
   return (
-    <div className='app__navigation'>
-      {['base', 'sauce', 'topping', 'cheese', 'remarks' ].map((item, index) => (
-        <a 
-          href={`/custom${item}`}
-          key={item + index}
-          className="app__navigation-dot" 
-          style={active === item ? { backgroundColor: '#FD6F3B' } : {} } 
-        > {index} </a>
+    <div className='navigation'>
+      {stepsImages.map((item, index) => (
+        <Link 
+          to={ `/custom${item.name}` }
+          key={ item.name + index }
+          className="navigation-dot" 
+          style={ active === item.name ? { backgroundColor: '#FD6F3B' } : {} } 
+        >
+          <img src={ item.src } alt={ item.name }/>
+        </Link>
       ))}
-
     </div>
   )
 }
