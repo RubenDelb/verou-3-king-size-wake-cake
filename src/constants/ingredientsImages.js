@@ -1,16 +1,17 @@
-import Basil from '../assets/Topping/Basil.webp';
-import Mushroom from '../assets/Topping/Mushroom.webp';
-import Olive from '../assets/Topping/Olive.webp';
-import Pineapple from '../assets/Topping/Pineapple.webp';
-import Tomato from '../assets/Topping/Tomato.webp';
-import Brocoli from '../assets/Topping/broccolis.webp';
-import Carrot from '../assets/Topping/carrots.webp';
-import Eggplant from '../assets/Topping/eggplants.webp';
-import CurrySauce from '../assets/Sauce/curry.webp';
-import PestoSauce from '../assets/Sauce/pesto.webp';
-import TomatoSauce from '../assets/Sauce/tomato.webp';
-import SpicySauce from '../assets/Sauce/spicy.webp';
-import EmptyBase from '../assets/Base/PizzaBaseEmpty.webp';
+import Basil from '../assets/Topping/Basil.png';
+import Mushroom from '../assets/Topping/Mushroom.png';
+import Olive from '../assets/Topping/Olive.png';
+import Pineapple from '../assets/Topping/Pineapple.png';
+import Tomato from '../assets/Topping/Tomato.png';
+import Brocoli from '../assets/Topping/broccolis.png';
+import Carrot from '../assets/Topping/carrots.png';
+import Eggplant from '../assets/Topping/eggplants.png';
+import CurrySauce from '../assets/Sauce/curry.png';
+import PestoSauce from '../assets/Sauce/pesto.png';
+import TomatoSauce from '../assets/Sauce/tomato-sauce.png'; 
+import SpicySauce from '../assets/Sauce/spicy.png';
+import DeepPan from '../assets/Base/thick-dough.png';
+import Authentic from '../assets/Base/thin-dough.png';
 
 export default [
     { src: Basil, name: "basil", zIndex: "z5", category: "topping" },
@@ -25,5 +26,6 @@ export default [
     { src: PestoSauce, name: "pesto", zIndex: "z2", category: "sauce" },
     { src: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce" },
     { src: SpicySauce, name: "spicy", zIndex: "z2", category: "sauce" },
-    { src: EmptyBase, name: "emptybase", zIndex: "z1", category: "base" },
+    { src: DeepPan, name: "Deeppan", zIndex: "z1", category: "base" },
+    { src: Authentic, name: "Authentic", zIndex: "z1", category: "base" },
 ]
