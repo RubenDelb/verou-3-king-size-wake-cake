@@ -39,22 +39,20 @@ const CustomBase = ({idName}) => {
             </div>
 
                 <div className='checkboxes-container'>
-                { baseImages.map((base) => {
+                { baseImages.map((item) => {
                     return (
                         <>
-                            { base.name === "pizzabase" ? "" : (
-                                <label className="container-checkbox">
-                                    {base.name}
-                                    <input
-                                        type="checkbox"
-                                        checked={ pizzas[base.name] } 
-                                        id={base.name}
-                                        onChange={ toggleIngredients }
-                                        // onClick={() => addPizza(base)}
-                                    />
-                                    <span className="checkmark"></span>
-                                </label>
-                            )}
+                            <label className="container-checkbox">
+                                {item.name}
+                                <input
+                                    type="checkbox"
+                                    checked={ pizzas[item.name] } 
+                                    id={item.name}
+                                    onChange={ (event) => toggleIngredients(event, item) }
+                                    // onClick={() => addPizza(item)}
+                                />
+                                <span className="checkmark"></span>
+                            </label>
                         </>
                     )
                 })}

@@ -39,18 +39,18 @@ const CustomSauce = ({idName}) => {
             </div>
 
             <div className='checkboxes-container'>
-                {sauceImages.map((sauce) => {
+                {sauceImages.map((item) => {
                     return (
                         <>
-                            {sauce.category === "sauce" && (
-                                <label className="container-checkbox" htmlFor={sauce.name} key={sauce.name}>
-                                    {sauce.name}
+                            {item.category === "sauce" && (
+                                <label className="container-checkbox" htmlFor={item.name} key={item.name}>
+                                    {item.name}
                                     <input
                                         type="checkbox"
                                         name="sauce-selection"
-                                        checked={ pizzas[sauce.name] }
-                                        id={sauce.name}
-                                        onChange={ toggleIngredients }
+                                        checked={ pizzas[item.name] }
+                                        id={item.name}
+                                        onChange={ (event) => toggleIngredients(event, item) }
                                     />
                                     <span className="checkmark"></span>
                                 </label>
