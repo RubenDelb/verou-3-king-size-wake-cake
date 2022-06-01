@@ -7,6 +7,12 @@ import Tomato from '../assets/Topping/Tomato.png';
 import Brocoli from '../assets/Topping/broccolis.png';
 import Carrot from '../assets/Topping/carrots.png';
 import Eggplant from '../assets/Topping/eggplants.png';
+import Bacon from '../assets/Topping/bacon.png';
+import Corn from '../assets/Topping/corn.png';
+import Onion from '../assets/Topping/onion.png';
+import Pepper from '../assets/Topping/pepper.png';
+import Pepperoni from '../assets/Topping/pepperoni.png';
+import Scampi from '../assets/Topping/scampi.png';
 import CurrySauce from '../assets/Sauce/curry.png';
 import PestoSauce from '../assets/Sauce/pesto.png';
 import TomatoSauce from '../assets/Sauce/tomato-sauce.png'; 
@@ -24,6 +30,12 @@ export default [
     { src: Brocoli, name: "brocoli", zIndex: "z4", category: "topping" },
     { src: Carrot, name: "carrot", zIndex: "z4", category: "topping" },
     { src: Eggplant, name: "eggplant", zIndex: "z4", category: "topping" },
+    { src: Bacon, name: "bacon", zIndex: "z4", category: "topping" },
+    { src: Corn, name: "corn", zIndex: "z4", category: "topping" },
+    { src: Onion, name: "onion", zIndex: "z4", category: "topping" },
+    { src: Pepper, name: "pepper", zIndex: "z4", category: "topping" },
+    { src: Pepperoni, name: "pepperoni", zIndex: "z4", category: "topping" },
+    { src: Scampi, name: "scampi", zIndex: "z4", category: "topping" },
     { src: CurrySauce, name: "curry", zIndex: "z2", category: "sauce" },
     { src: PestoSauce, name: "pesto", zIndex: "z2", category: "sauce" },
     { src: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce" },
