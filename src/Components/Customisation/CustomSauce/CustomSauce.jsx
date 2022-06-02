@@ -7,7 +7,7 @@ import PizzaContext from '../../../PizzaContext';
 import Checkbox from '../../Checkbox';
 
 const CustomSauce = ({idName}) => {
-    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
+    const {pizzas, toggleIngredients} = useContext(PizzaContext);
     
     return (
         <>

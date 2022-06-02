@@ -8,7 +8,7 @@ import Checkbox from '../../Checkbox';
 
 
 const CustomBase = ({idName}) => {
-    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
+    const {pizzas, toggleIngredients} = useContext(PizzaContext);
 
     return (
         <>
