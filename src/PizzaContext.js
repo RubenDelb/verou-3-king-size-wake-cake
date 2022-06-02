@@ -38,11 +38,10 @@ export function PizzaProvider({children}){
 
     const toggleIngredients = (e, item) => {
         const id = e.target.id;
-        const checked = e.target.checked;
         cheeseImages.map((image) => {
             if (id === image.name) {
                 // Set the value of the selected checkmark to the selected value (true or false)
-                setPizzas(prevValue => ({ ...prevValue, [id]: checked }));
+                setPizzas(prevValue => ({ ...prevValue, [id]: !pizzas[id] }));
             }
             else if (image.category === item?.category) {
                 // Set all the other values of the same category that has been selected to false, so only 1 can be chosen.
