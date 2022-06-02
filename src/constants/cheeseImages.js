@@ -4,7 +4,7 @@ import Mushroom from '../assets/Topping/Mushroom.png';
 import Olive from '../assets/Topping/Olive.png';
 import Pineapple from '../assets/Topping/Pineapple.png';
 import Tomato from '../assets/Topping/Tomato.png';
-import Brocoli from '../assets/Topping/broccolis.png';
+import Broccoli from '../assets/Topping/broccolis.png';
 import Carrot from '../assets/Topping/carrots.png';
 import Eggplant from '../assets/Topping/eggplants.png';
 import Bacon from '../assets/Topping/bacon.png';
@@ -27,7 +27,7 @@ export default [
     { src: Olive, name: "olive", zIndex: "z3", category: "topping" },
     { src: Pineapple, name: "pineapple", zIndex: "z3", category: "topping" },
     { src: Tomato, name: "tomato", zIndex: "z4", category: "topping" },
-    { src: Brocoli, name: "brocoli", zIndex: "z4", category: "topping" },
+    { src: Broccoli, name: "broccoli", zIndex: "z4", category: "topping" },
     { src: Carrot, name: "carrot", zIndex: "z4", category: "topping" },
     { src: Eggplant, name: "eggplant", zIndex: "z4", category: "topping" },
     { src: Bacon, name: "bacon", zIndex: "z4", category: "topping" },
