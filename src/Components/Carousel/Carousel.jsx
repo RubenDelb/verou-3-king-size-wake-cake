@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { completeImages } from '../../constants';
+import stepsImages from "../../constants/stepsImages";
 
 import "./Carousel.scss";
 
@@ -31,13 +32,16 @@ const Carousel = () => {
                 dragMomentum={false}
                 className="inner-carousel"
             >
-                {completeImages.map((image) => {
+                {stepsImages.map((image) => {
                     return(
                         <>
                             <div className="item" key={image.name}> 
                                 <img src={image.src} alt="" />
                             </div>
-                            <h1>{image.name}</h1>
+                            <div className="text">
+                                <h1>{image.title}</h1>
+                                <h6>{ image.description }</h6>
+                            </div>
                         </>
                     );
                 })}
