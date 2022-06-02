@@ -43,17 +43,22 @@ const CustomTopping = ({idName}) => {
                     return (
                         <>
                             { ingredient.category === "topping" && (
-                                <label className="container-checkbox" htmlFor={ingredient.name} key={ingredient.name}>
-                                    <img src={ingredient.src} alt={ingredient.name} height="15%" width="15%" />
+                                <button 
+                                    className="container-checkbox" 
+                                    key={ingredient.name}
+                                    id={ingredient.name}
+                                    onClick={ (event) => toggleIngredients(event) }
+                                    >
+                                        <img src={ingredient.src} alt={ingredient.name} height="15%" width="15%" />
                                     {ingredient.name}
-                                    <input
+                                    {/* <input
                                         type="checkbox"
                                         checked={ pizzas[ingredient.name] }
                                         onChange={ (event) => toggleIngredients(event) }
                                         id={ingredient.name}
-                                    />
-                                    <span className="checkmark"></span>
-                                </label>
+                                    /> */}
+                                    {/* <span className="checkmark"></span> */}
+                                </button>
                             ) }
                         </>
                     )
