@@ -33,17 +33,16 @@
 
 .customize {
     display: flex;
-    // align-content: center;
     height: auto;
 
     .image-container {
         flex: auto;
+        width: 500px;
+        align-self: center;
         padding: 40px;
         height: 550px;
 
         .inner-image-container {
-            max-height: 500px;
-            max-width: 500px;
             position: relative;
             
             .ingredients {
@@ -71,16 +70,19 @@
     }
 
     .checkboxes-container {
-        flex: 1;
-        padding: 40px;
-        height: 80vh;
-        overflow-y: scroll;
-
+        height: 550px;
+        flex: auto;
+        margin: 40px 0;
+        overflow-y: scroll;   
+        
         .container-checkbox {
-            display: block;
+            display: flex;
+            justify-content: space-around;
+            width: 250px;
             position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
+            padding: 5px 10px;
+            margin: 0 20px 12px 20px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 22px;
             -webkit-user-select: none;
@@ -92,77 +94,56 @@
                 pointer-events: none;
             }
 
-            input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                border-radius: 5px;
-
-                &:checked ~ .checkmark {
-                    background-color: #2fb21d;
-                }
-
-                &:checked ~ .checkmark:after {
-                    display: block;
-                }
-            }
-
-            .checkmark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 25px;
-                width: 25px;
-                background-color: #eee;
-                border-radius: 5px;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    display: none;
-                    left: 9px;
-                    top: 5px;
-                    width: 5px;
-                    height: 10px;
-                    border: solid #0d0628;
-                    border-width: 0 3px 3px 0;
-                    -webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                }
-            }
-
-            &:hover {
-                input ~ .checkmark {
-                    background-color: #ccc;
-                }
+            p {
+                align-self: center;
+                pointer-events: none;
             }
         }
 
-        @media screen and (max-width: 900px) {
-            height: 10vh;
+        @media screen and (max-width: 700px) {
+            height: 200px;
             display: flex;
             overflow-x: scroll;
+            margin-top: 100px;
+
+            .container-checkbox {
+                min-width: 250px;
+                min-height: 10vh;
+
+                img{
+                    width: 25%;
+                    height: 100%;
+                }
+
+                p {
+                    align-self: center;
+                }
+            }
         }
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 700px) {
         display: flex;
         flex-direction: column;
         .image-container {
             height: 500px;
         }
+
+        .checkboxes-container {
+            height: auto;
+        }
     }
 
     @media screen and (max-width: 500px) {
         .image-container {
-            height: 400px;
+            height: 300px;
+            width: 400px;
         }
     }
 
     @media screen and (max-width: 400px) {
         .image-container {
-            height: 300px;
+            width: 300px;
         }
     }
 }
@@ -172,7 +153,6 @@
     padding: 10% 0;
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
     height: 100vh;
     justify-content: space-around;
     position:fixed;
