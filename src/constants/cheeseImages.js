@@ -17,6 +17,7 @@ import CurrySauce from '../assets/Sauce/curry.png';
 import PestoSauce from '../assets/Sauce/pesto.png';
 import TomatoSauce from '../assets/Sauce/tomato-sauce.png'; 
 import SpicySauce from '../assets/Sauce/spicy.png';
+import BarbequeSauce from '../assets/Sauce/barbeque.png';
 import DeepPan from '../assets/Base/thick-dough.png';
 import Authentic from '../assets/Base/thin-dough.png';
 
@@ -29,16 +30,17 @@ export default [
     { src: Tomato, name: "tomato", zIndex: "z4", category: "topping" },
     { src: Broccoli, name: "broccoli", zIndex: "z4", category: "topping" },
     { src: Carrot, name: "carrot", zIndex: "z4", category: "topping" },
-    { src: Eggplant, name: "eggplant", zIndex: "z4", category: "topping" },
     { src: Bacon, name: "bacon", zIndex: "z4", category: "topping" },
     { src: Corn, name: "corn", zIndex: "z4", category: "topping" },
     { src: Onion, name: "onion", zIndex: "z4", category: "topping" },
     { src: Pepper, name: "pepper", zIndex: "z4", category: "topping" },
-    { src: Pepperoni, name: "pepperoni", zIndex: "z4", category: "topping" },
+    { src: Pepperoni, name: "pepperoni", zIndex: "z3", category: "topping" },
     { src: Shrimp, name: "shrimp", zIndex: "z3", category: "topping" },
+    { src: Eggplant, name: "eggplant", zIndex: "z3", category: "topping" },
+    { src: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce" },
+    { src: BarbequeSauce, name: "barbeque", zIndex: "z2", category: "sauce" },
     { src: CurrySauce, name: "curry", zIndex: "z2", category: "sauce" },
     { src: PestoSauce, name: "pesto", zIndex: "z2", category: "sauce" },
-    { src: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce" },
     { src: SpicySauce, name: "spicy", zIndex: "z2", category: "sauce" },
     { src: DeepPan, name: "Deeppan", zIndex: "z1", category: "base" },
     { src: Authentic, name: "Authentic", zIndex: "z1", category: "base" },
