@@ -5,7 +5,6 @@ import NavigationDots from '../../NavigationDots';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
 import Checkbox from '../../Checkbox';
-import Button from '../../Button/Button';
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
