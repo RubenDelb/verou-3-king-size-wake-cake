@@ -4,14 +4,11 @@ import baseImages from '../../../constants/baseImages';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
 import NavigationDots from '../../NavigationDots';
+import Checkbox from '../../Checkbox';
 
 
 const CustomBase = ({idName}) => {
-    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
-
-    setTimeout(() => {
-        localStorageSaver()
-    }, 1000);
+    const {pizzas, toggleIngredients} = useContext(PizzaContext);
 
     return (
         <>
@@ -41,19 +38,7 @@ const CustomBase = ({idName}) => {
                 <div className='checkboxes-container'>
                 { baseImages.map((item) => {
                     return (
-                        <>
-                            <label className="container-checkbox">
-                                {item.name}
-                                <input
-                                    type="checkbox"
-                                    checked={ pizzas[item.name] } 
-                                    id={item.name}
-                                    onChange={ (event) => toggleIngredients(event, item) }
-                                    // onClick={() => addPizza(item)}
-                                />
-                                <span className="checkmark"></span>
-                            </label>
-                        </>
+                        <Checkbox item={item} toggleIngredients={toggleIngredients} />
                     )
                 })}
             </div>

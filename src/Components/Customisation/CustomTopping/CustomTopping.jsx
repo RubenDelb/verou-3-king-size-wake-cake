@@ -4,13 +4,10 @@ import { motion } from 'framer-motion';
 import NavigationDots from '../../NavigationDots';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
+import Checkbox from '../../Checkbox';
 
 const CustomTopping = ({idName}) => {
-    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
-
-    setTimeout(() => {
-        localStorageSaver()
-    }, 1000);
+    const {pizzas, toggleIngredients} = useContext(PizzaContext);
 
     return (
         <>
@@ -43,22 +40,7 @@ const CustomTopping = ({idName}) => {
                     return (
                         <>
                             { ingredient.category === "topping" && (
-                                <button 
-                                    className="container-checkbox" 
-                                    key={ingredient.name}
-                                    id={ingredient.name}
-                                    onClick={ (event) => toggleIngredients(event) }
-                                    >
-                                        <img src={ingredient.src} alt={ingredient.name} height="15%" width="15%" />
-                                    {ingredient.name}
-                                    {/* <input
-                                        type="checkbox"
-                                        checked={ pizzas[ingredient.name] }
-                                        onChange={ (event) => toggleIngredients(event) }
-                                        id={ingredient.name}
-                                    /> */}
-                                    {/* <span className="checkmark"></span> */}
-                                </button>
+                                <Checkbox item={ingredient} toggleIngredients={toggleIngredients} />
                             ) }
                         </>
                     )

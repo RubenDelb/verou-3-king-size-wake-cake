@@ -4,13 +4,10 @@ import './CustomSauce.scss';
 import NavigationDots from '../../NavigationDots';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
+import Checkbox from '../../Checkbox';
 
 const CustomSauce = ({idName}) => {
-    const {pizzas, toggleIngredients, localStorageSaver} = useContext(PizzaContext);
-
-    setTimeout(() => {
-        localStorageSaver()
-    }, 1000);
+    const {pizzas, toggleIngredients} = useContext(PizzaContext);
     
     return (
         <>
@@ -43,17 +40,7 @@ const CustomSauce = ({idName}) => {
                     return (
                         <>
                             {item.category === "sauce" && (
-                                <label className="container-checkbox" htmlFor={item.name} key={item.name}>
-                                    {item.name}
-                                    <input
-                                        type="checkbox"
-                                        name="sauce-selection"
-                                        checked={ pizzas[item.name] }
-                                        id={item.name}
-                                        onChange={ (event) => toggleIngredients(event, item) }
-                                    />
-                                    <span className="checkmark"></span>
-                                </label>
+                                <Checkbox item={item} toggleIngredients={toggleIngredients} />
                             )}
                         </>
                     )

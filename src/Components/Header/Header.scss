@@ -6,6 +6,62 @@
     align-items: center;
 }
 
-.title {
-    color: #b09e75;
+.navbar {
+    width: 100%;
+    flex-wrap: wrap;
+    background-color:#DD4A48;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    z-index: 7;
+}
+
+.navbar-links {
+    // flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    text-align: center;
+
+    a {
+        padding: 0 10px;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+    z-index: 11;
+
+    &:focus {
+        outline: none;
+    }
+
+    @media screen and (max-width: 800px) {
+        display: block;        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-links.show {
+        display: flex;
+        
+        a {
+            padding: 10px;
+        }
+    }
 }
