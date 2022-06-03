@@ -5,6 +5,9 @@ import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
 import NavigationDots from '../../NavigationDots';
 import Checkbox from '../../Checkbox';
+import { Link } from 'react-router-dom';
+import { IoIosArrowForward } from 'react-icons/io'
+
 
 
 const CustomBase = ({idName}) => {
@@ -44,6 +47,13 @@ const CustomBase = ({idName}) => {
             </div>
         </div>
         <NavigationDots active={idName} />
+        <div className="link-div first">
+            <Link to={"/customsauce"} className="link"> 
+                Sauce 
+                <IoIosArrowForward className='arrow-next' /> 
+            </Link>
+        </div>
+
         </>
 
     )

@@ -5,6 +5,8 @@ import NavigationDots from '../../NavigationDots';
 import { useContext } from 'react';
 import PizzaContext from '../../../PizzaContext';
 import Checkbox from '../../Checkbox';
+import { Link } from 'react-router-dom';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 const CustomTopping = ({idName}) => {
     const {pizzas, toggleIngredients} = useContext(PizzaContext);
@@ -48,6 +50,16 @@ const CustomTopping = ({idName}) => {
             </div>
         </div>
         <NavigationDots active={idName} />
+        <div className="link-div">
+            <Link to={"/customsauce"} className="link"> 
+                <IoIosArrowBack className='arrow-back' />
+                Sauce  
+            </Link>
+            <Link to={"/customcheese"} className="link"> 
+                Cheese 
+                <IoIosArrowForward className='arrow-next' /> 
+            </Link>
+        </div>
         </>
     )
 }
