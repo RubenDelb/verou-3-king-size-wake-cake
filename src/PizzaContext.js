@@ -18,7 +18,6 @@ export function PizzaProvider({children}){
         bacon: false,
         corn: false,
         onion: false,
-        scampi: false,
         pepper: false,
         pepperoni: false,
         shrimp: false,
@@ -44,7 +43,7 @@ export function PizzaProvider({children}){
             // Check if the clicked button id is the same as the image
             if (id === image.name) {
                 // This is to prevent that there would be no dough, or no sauce
-                if (pizzas[id] === false || item?.category === 'topping') {
+                if (pizzas[id] === false || item?.category === 'topping' || item?.category === 'cheese') {
                     // Set the value of the selected ingredient to the opposite value (true or false)
                     setPizzas(prevValue => ({ ...prevValue, [id]: !pizzas[id] }));
                 }
