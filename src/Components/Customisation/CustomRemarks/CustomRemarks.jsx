@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import Button from '../../Button/Button';
 import NavigationDots from '../../NavigationDots';
 import './CustomRemarks.scss';
 import { useContext } from 'react';
