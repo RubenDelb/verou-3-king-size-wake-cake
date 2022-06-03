@@ -1,6 +1,7 @@
 import stepsImages from '../../constants/stepsImages';
 import Carousel from '../Carousel/Carousel';
 import './Home.scss';
+import homePizzas from '../../constants/homePizzas';
 
 
 const Home = () => {
@@ -9,23 +10,59 @@ const Home = () => {
         <div className='home'>
             <Carousel />
             <div className='howTo'>
-                <h2>How to?</h2> <br />
-                <h3>Step 1:</h3>
-                <img src={stepsImages[0].src} alt="pizzabase" />
-                <p>Select your base.</p>
-                <h3>Step 2:</h3>
-                <img src={stepsImages[1].src} alt="sauce" />
-                <p>Select your sauce. Are you an adventurous or traditional kind of person?</p>
-                <h3>Step 3:</h3>
-                <img src={stepsImages[2].src} alt="topping" />
-                <p>Select your toping. All of them are possible.</p>
-                <h3>Step 4:</h3>
-                <img src={stepsImages[3].src} alt="cheese" />
-                <p>Do you like cheese or your life is boring?</p>
-                <h3>Step 5:</h3>
-                <img src={stepsImages[4].src} alt="remarks" />
-                <p>Let us know if you have a sensitive belly and we will take care of it.</p>
+                <h2>Need inspiration? Take a look...</h2> <br />
+                <div className="container">
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[0].src} alt="pizzabase" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>Our egg-celent pizzas will melt your heart</h3>
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[1].src} alt="sauce" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>Sometime less is more</h3>
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[2].src} alt="topping" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>Be wise when choosing your sauce</h3>
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[3].src} alt="cheese" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>Love comes in all shapes </h3>
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[4].src} alt="remarks" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>Meat me halfway</h3>
+                    </div>
+                </div>
+                <div className='card'>
+                    <div className='card-front'>
+                        <img src={homePizzas[5].src} alt="remarks" />
+                    </div>
+                    <div className='card-back'>
+                        <h3>There's one for everyone, even for the pineapple connoisseur</h3>
+                    </div>
+                </div>
+                
             </div>
+        </div>
         </div>
         </>
 
