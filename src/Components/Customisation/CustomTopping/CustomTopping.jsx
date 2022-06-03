@@ -1,5 +1,5 @@
 import './CustomTopping.scss';
-import { ingredientsImages } from '../../../constants';
+import ingredientsImages from '../../../constants/ingredientsImages';
 import { motion } from 'framer-motion';
 import NavigationDots from '../../NavigationDots';
 import { useContext } from 'react';

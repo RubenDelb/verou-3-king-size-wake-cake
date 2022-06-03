@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import { completeImages } from '../../constants';
 import stepsImages from "../../constants/stepsImages";
 
 import "./Carousel.scss";
