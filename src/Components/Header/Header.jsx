@@ -29,8 +29,8 @@ const Header = () => {
             </button>
             <ul className={`navbar-links ${toggle ? 'show' : ''}`}>
                 <Link to={"/"} key={'home'}  onClick={() => setToggle(false)} > <li>Home</li> </Link>
-                <Link to="/custombase" key={'home'}  onClick={() => setToggle(false)} ><li>Customize pizza</li></Link>
-                <Link to={"/checkout"} key={'home'}  onClick={() => setToggle(false)} ><li>Checkout</li></Link>
+                <Link to="/custombase" key={'base'}  onClick={() => setToggle(false)} ><li>Customize pizza</li></Link>
+                <Link to={"/checkout"} key={'checkout'}  onClick={() => setToggle(false)} ><li>Checkout</li></Link>
                 {/* <Link to="/AddRecipe"><Button btnName={'Get Inspire'} /></Link> */}
             </ul>
             
