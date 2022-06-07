@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
+    padding: 5px 2rem;
     z-index: 7;
 }
 
@@ -29,6 +29,10 @@
         padding: 0 10px;
         text-decoration: none;
         color: white;
+
+        li:hover {
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        }
     }
 }
 
