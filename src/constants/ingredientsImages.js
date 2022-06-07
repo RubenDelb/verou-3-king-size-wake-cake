@@ -49,7 +49,7 @@ export default [
     { src: Bacon, src2: BaconOne, name: "bacon", zIndex: "z4", category: "topping" },
     { src: Corn, src2: CornOne, name: "corn", zIndex: "z4", category: "topping" },
     { src: Onion, src2: OnionOne, name: "onion", zIndex: "z4", category: "topping" },
-    { src: Pepper, src2: PepperOne, name: "pepper", zIndex: "z4", category: "topping" },
+    { src: Pepper, src2: PepperOne, name: "pepper", zIndex: "z3", category: "topping" },
     { src: Pepperoni, src2: PepperoniOne, name: "pepperoni", zIndex: "z3", category: "topping" },
     { src: Shrimp, src2: ShrimpOne, name: "shrimp", zIndex: "z3", category: "topping" },
     { src: Eggplant, src2: EggplantOne, name: "eggplant", zIndex: "z3", category: "topping" },
