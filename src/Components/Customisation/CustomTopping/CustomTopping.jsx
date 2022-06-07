@@ -15,29 +15,30 @@ const CustomTopping = ({idName}) => {
         <>
         <div className="customize">
             <div className='image-container'>
-            <div className='inner-image-container'>
-                {ingredientsImages.map((ingredient) => {
-                    return (
-                        <>
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{
-                                    y: pizzas[ingredient.name] ? 0 : -200,
-                                    opacity: pizzas[ingredient.name] ? 1 : 0,
-                                }}
-                                transition={{ duration: 1 }}
-                                className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
-                                key={ingredient.name}
-                            >
-                                <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
-                            </motion.div>
-                        </>
-                    )
-                })}
-            </div>    
+                <div className='inner-image-container'>
+                    {ingredientsImages.map((ingredient) => {
+                        return (
+                            <>
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        y: pizzas[ingredient.name] ? 0 : -200,
+                                        opacity: pizzas[ingredient.name] ? 1 : 0,
+                                    }}
+                                    transition={{ duration: 1 }}
+                                    className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
+                                    key={ingredient.name}
+                                >
+                                    <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
+                                </motion.div>
+                            </>
+                        )
+                    })}
+                </div>    
             </div>
 
             <div className='checkboxes-container'>
+                
                 {ingredientsImages.map((ingredient) => {
                     return (
                         <>
@@ -47,6 +48,16 @@ const CustomTopping = ({idName}) => {
                         </>
                     )
                 })}
+                <button 
+                    className="container-checkbox" 
+                    key="delete-all"
+                    id="delete-all"
+                    onClick={ (event) => toggleIngredients(event) }
+                    style={{ border: "2px solid", backgroundColor: "#CE9461" }}
+                >
+                    {/* <img src={item.src2} alt={item.name} height="auto" width="20%" /> */}
+                    <p style={{ color: "crimson" }}>Delete all toppings</p>
+                </button>
             </div>
         </div>
         <NavigationDots active={idName} />
