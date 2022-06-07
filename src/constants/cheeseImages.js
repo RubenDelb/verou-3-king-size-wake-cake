@@ -1,4 +1,5 @@
 import BasicCheese from '../assets/Cheese/grated-cheese.png';
+import Mozzarella from '../assets/Cheese/mozzarella.png';
 import Basil from '../assets/Topping/Basil.png';
 import Mushroom from '../assets/Topping/Mushroom.png';
 import Olive from '../assets/Topping/Olive.png';
@@ -23,6 +24,7 @@ import Authentic from '../assets/Base/thin-dough.png';
 
 export default [
     { src: BasicCheese, src2: BasicCheese, name: "cheese", zIndex: "z5", category: "cheese" },
+    { src: Mozzarella, src2: Mozzarella, name: "mozzarella", zIndex: "z5", category: "cheese" },
     { src: Basil, name: "basil", zIndex: "z5", category: "topping" },
     { src: Mushroom, name: "mushroom", zIndex: "z4", category: "topping" },
     { src: Olive, name: "olive", zIndex: "z3", category: "topping" },
