@@ -48,12 +48,21 @@ export function PizzaProvider({children}){
                     setPizzas(prevValue => ({ ...prevValue, [id]: !pizzas[id] }));
                 }
             }
-            else if (image.category === item?.category && item?.category !== "topping") {
+            else if (image.category === item?.category && item?.category !== "topping" && item?.category !== "cheese") {
                 // Set all the other values of the same category that has been selected to false, so only 1 can be chosen.
                 // Not for the toppings!
                 setPizzas(prevValue => ({ ...prevValue, [image.name]: false }));
             }
         })
+        // If the delete-all button is clicked, set all active toppings to false to remove them
+        if ( id === 'delete-all' ) {
+            let allToppings = cheeseImages.filter((ingredient) => ingredient.category === 'topping');
+            console.log(allToppings);
+            allToppings.map((topping => {
+                setPizzas(prevValue => ({ ...prevValue, [topping.name]: false}))
+            }))
+            
+        }
     };
 
     setTimeout(() => {
