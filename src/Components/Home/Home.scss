@@ -21,7 +21,8 @@
 
     .card {
         margin: auto;
-        border-radius: 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
         height: 200px;
         width: 200px;
         transform-style: preserve-3d;
@@ -36,6 +37,7 @@
     }
     
     .card-front {
+        border-radius: 10px;
         height: 100%;
         width: 100%;
         background-position: 50% 50%;
@@ -49,6 +51,9 @@
         transition: .5s;
     }
     .card-back{
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -66,15 +71,13 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
     .howTo {
         .container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            place-items: center;
     
-        }
-        .card {
-            margin: 5%;
         }
     }
 }
@@ -86,9 +89,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
-        }
-        .card {
-            width:50%;
+        align-content: center;
         }
     }
 }
