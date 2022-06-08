@@ -18,20 +18,18 @@ const CustomTopping = ({idName}) => {
                 <div className='inner-image-container'>
                     {ingredientsImages.map((ingredient) => {
                         return (
-                            <>
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        y: pizzas[ingredient.name] ? 0 : -200,
-                                        opacity: pizzas[ingredient.name] ? 1 : 0,
-                                    }}
-                                    transition={{ duration: 1 }}
-                                    className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
-                                    key={ingredient.name}
-                                >
-                                    <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
-                                </motion.div>
-                            </>
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    y: pizzas[ingredient.name] ? 0 : -200,
+                                    opacity: pizzas[ingredient.name] ? 1 : 0,
+                                }}
+                                transition={{ duration: 1 }}
+                                className={`ingredients ${ingredient.zIndex} ${ingredient.name}`}
+                                key={ingredient.name}
+                            >
+                                <img src={ingredient.src} alt={ingredient.name} height="100%" width="100%" />
+                            </motion.div>
                         )
                     })}
                 </div>    
@@ -41,11 +39,9 @@ const CustomTopping = ({idName}) => {
                 
                 {ingredientsImages.map((ingredient) => {
                     return (
-                        <>
-                            { ingredient.category === "topping" && (
-                                <Checkbox item={ingredient} toggleIngredients={toggleIngredients} />
-                            ) }
-                        </>
+                        ingredient.category === "topping" && (
+                            <Checkbox item={ingredient} toggleIngredients={toggleIngredients} />
+                        ) 
                     )
                 })}
                 <button 
