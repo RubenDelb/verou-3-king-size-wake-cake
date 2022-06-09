@@ -1,4 +1,3 @@
-
 import DeepPan from '../assets/Base/thick-dough.png';
 import Authentic from '../assets/Base/thin-dough.png';
 
