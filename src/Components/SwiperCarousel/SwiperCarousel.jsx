@@ -38,9 +38,9 @@ const SwiperCarousel = () => {
             
                     {stepsImages.map((image) => {
                         return(
-                            <SwiperSlide className="inner-carousel">
+                            <SwiperSlide className="inner-carousel" key={image.name}>
                                 <div className="item" key={image.name}>
-                                    <img src={image.src} alt="" />
+                                    <img src={image.src} alt={image.name}/>
                                 </div>
                                 <div className="text">
                                     <h1>{image.title}</h1>
