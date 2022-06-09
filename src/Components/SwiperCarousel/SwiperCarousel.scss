@@ -1,0 +1,43 @@
+.carousel {
+    margin: 20px 0;
+    cursor: grab;
+    overflow: hidden;
+    background-color: #F5EEDC;
+
+    .inner-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: lightblue;
+
+        .item {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            min-width: 10rem;
+            padding: 40px;
+
+            &:not(:first-child) {
+                margin-left: 150px;
+            }
+
+            img {
+                flex: 0;
+                width: 100px;
+                height: 100px;
+                pointer-events: none;
+            }
+        }
+
+        .text {
+            flex: 1;
+
+            
+            h1 {
+                color: rgb(160, 91, 0);
+            }
+        }
+        
+    }
+}
+
