@@ -5,11 +5,13 @@ import PizzaContext from '../../PizzaContext';
 import './Checkout.scss';
 import { IoIosArrowBack, IoMdCheckmark } from 'react-icons/io'
 import cheeseImages from '../../constants/cheeseImages';
+import OrderConf from '../Checkout/order-done.png'
+import Success from '../Checkout/success.png'
 
 const Checkout = () => {   
+    
   // TODO: get ingredients from localstorage
     const {pizzas, toggleIngredients} = useContext(PizzaContext);
-
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
 
@@ -18,7 +20,12 @@ const Checkout = () => {
             <div className='checkout-container'>
                 { success ? // If confirm is clicked then show
                     <div className='success-container'>
-                        <h1 className='success-title'>We have successfully received you order, Thank you!</h1>
+                        <div className='success-box'>
+                            <img src={Success} alt="" height="100%" width="100%" />
+                            <h2 className='success-title'>We have successfully received you order. <br /> Thank you!</h2>
+                            <img src={OrderConf} alt="" height="100%" width="100%" />
+                            <h4>Your order will be ready for pick-up @ </h4>
+                        </div>
                     </div>
                     : // ELSE show
                     <div className="customize">
@@ -74,6 +81,7 @@ const Checkout = () => {
                     </div>
                     
                 }
+                { success ? [] :
                 <div className="link-div">
                     <Link to={"/customremarks"} className="link"> 
                         <IoIosArrowBack className='arrow-back' />
@@ -84,6 +92,7 @@ const Checkout = () => {
                         <IoMdCheckmark className='arrow-next' />
                     </Link>
                 </div>
+                }
             </div>
         </div>
     )
