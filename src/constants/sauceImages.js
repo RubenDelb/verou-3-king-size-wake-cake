@@ -8,12 +8,12 @@ import DeepPan from '../assets/Base/thick-dough.png';
 import Authentic from '../assets/Base/thin-dough.png';
 
 export default [
-    { src: TomatoSauce, src2: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce" },
-    { src: BarbequeSauce, src2: BarbequeSauce, name: "barbeque", zIndex: "z2", category: "sauce" },
-    { src: CurrySauce, src2: CurrySauce, name: "curry", zIndex: "z2", category: "sauce" },
-    { src: PestoSauce, src2: PestoSauce, name: "pesto", zIndex: "z2", category: "sauce"  },
-    { src: GarlicSauce, src2: GarlicSauce, name: "garlic", zIndex: "z2", category: "sauce"  },
-    { src: SpicySauce, src2: SpicySauce, name: "spicy", zIndex: "z2", category: "sauce"  },
-    { src: DeepPan, src2: DeepPan, name: "Deeppan", zIndex: "z1", category: "base" },
-    { src: Authentic, src2: Authentic, name: "Authentic", zIndex: "z1", category: "base" },
+    { src: TomatoSauce, src2: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce", price: 0 },
+    { src: BarbequeSauce, src2: BarbequeSauce, name: "barbeque", zIndex: "z2", category: "sauce", price: 0 },
+    { src: CurrySauce, src2: CurrySauce, name: "curry", zIndex: "z2", category: "sauce", price: 0 },
+    { src: PestoSauce, src2: PestoSauce, name: "pesto", zIndex: "z2", category: "sauce", price: 0 },
+    { src: GarlicSauce, src2: GarlicSauce, name: "garlic", zIndex: "z2", category: "sauce", price: 0 },
+    { src: SpicySauce, src2: SpicySauce, name: "spicy", zIndex: "z2", category: "sauce", price: 0 },
+    { src: DeepPan, src2: DeepPan, name: "Deeppan", zIndex: "z1", category: "base", price: 7 },
+    { src: Authentic, src2: Authentic, name: "Authentic", zIndex: "z1", category: "base", price: 7 },
 ]
