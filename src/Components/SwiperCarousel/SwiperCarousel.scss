@@ -6,15 +6,11 @@
 
     .inner-carousel {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        // background-color: lightblue;
 
         .item {
-            display: flex;
-            justify-content: center;
-            flex: 1;
-            min-width: 10rem;
+            width: 40%;
             padding: 40px;
 
             &:not(:first-child) {
@@ -22,7 +18,7 @@
             }
 
             img {
-                flex: 0;
+                
                 width: 100px;
                 height: 100px;
                 pointer-events: none;
@@ -30,8 +26,9 @@
         }
 
         .text {
-            flex: 1;
-
+            justify-self: flex-start;
+            width: 40%;
+            padding-right: 20px;
             
             h1 {
                 color: rgb(160, 91, 0);
