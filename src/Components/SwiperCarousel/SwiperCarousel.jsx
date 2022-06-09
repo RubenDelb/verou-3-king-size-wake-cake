@@ -31,6 +31,7 @@ const SwiperCarousel = () => {
                     }}
                 }
                 navigation
+                loop={true}
                 autoplay={{ delay: 3000 }}
                 pagination={{ clickable: true }}
                 
