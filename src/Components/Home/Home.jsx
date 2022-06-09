@@ -1,14 +1,14 @@
 import stepsImages from '../../constants/stepsImages';
-import Carousel from '../Carousel/Carousel';
 import './Home.scss';
 import homePizzas from '../../constants/homePizzas';
+import SwiperCarousel from '../SwiperCarousel/SwiperCarousel';
 
 
 const Home = () => {
     return (
         <>
         <div className='home'>
-            <Carousel />
+            <SwiperCarousel />
             <div className='howTo'>
                 <h2>Need inspiration? Take a look...</h2> 
                 <br />
