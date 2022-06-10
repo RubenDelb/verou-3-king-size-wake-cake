@@ -11,8 +11,8 @@ const Checkbox = ({ item, toggleIngredients }) => {
             key={item.src}
             id={item.name}
             onClick={ (event) => toggleIngredients(event, item) }
-            style={ pizzas[item.name] ? {backgroundColor: "#D6D4A0"} : {backgroundColor: "var(--white-color)"} }
         >
+            <div style={ pizzas[item.name] ? { backgroundColor: "#60992D" } : { backgroundColor: "#DD4A48" } }/>
             <img src={item.src2} alt={item.name} height="auto" width="20%" />
             <p className="item-name">{item.name}</p>
             <p className="price">${item.price}</p>
