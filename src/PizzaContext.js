@@ -22,9 +22,12 @@ export function PizzaProvider({children}){
         pepperoni: false,
         shrimp: false,
         carrot: false,
+        chicken: false,
         curry: false,
         pesto: false,
         tomatoSauce: true,
+        barbeque: false,
+        garlic: false,
         spicy: false
     });
 
