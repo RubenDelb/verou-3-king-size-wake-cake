@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <nav className='navbar'>
             <div className='logo'>
-                <Link to={"/"} ><img src={Logo} alt="PizzaVerse-logo" /></Link> 
+                <Link to={"/"} ><img src={Logo} alt="PizzaVerse-logo" height="100%" width="100%"/></Link> 
             </div>
             <button className='hamburger' id='hamburger'>
                 <motion.div 
