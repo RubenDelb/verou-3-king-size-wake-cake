@@ -1,6 +1,5 @@
 .checkout {
     .checkout-container {
-        margin: 2rem;
         align-items: center;
         .success-container {
             margin: 0 10%;
@@ -9,8 +8,7 @@
             .success-box {
                 border: 2px solid black;
                 text-align: center;
-                .success-title {
-                }
+
                 img {
                     width: 100px;
                     height: 100px;
@@ -18,21 +16,25 @@
             }
         }
 
-        .customize {
-            .image-container {
-                .inner-image-container {
-                    .ingredients {
-
-                    }
-                }
-            }
-
+        .confirmation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        
+            background-color:#355e39 ;
+            border-bottom-left-radius: 120px;
+            
             .confirmation {
                 align-self: center;
-                padding: 1rem;
-                flex: auto;
+                padding: 3rem;
+                color: whitesmoke;
+                // flex: auto;
                 // border: 2px solid rgb(17, 124, 17);
                 border-radius: 10px;
+                // width: 100vw;
+                
                 
                 .head-text {
                     text-align: center;
@@ -64,6 +66,9 @@
                         }
                     }
                 }
+            }
+            @media screen and (max-width: 800px){
+                border-radius: 50px;
             }
         }
     }

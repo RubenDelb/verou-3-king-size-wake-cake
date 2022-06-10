@@ -1,19 +1,17 @@
 import { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PizzaContext from '../../PizzaContext';
 import './Checkout.scss';
-import { IoIosArrowBack, IoMdCheckmark } from 'react-icons/io'
+import { IoIosArrowBack, IoMdCheckmark } from 'react-icons/io';
 import cheeseImages from '../../constants/cheeseImages';
-import OrderConf from '../Checkout/order-done.png'
-import Success from '../Checkout/success.png'
+import OrderConf from '../Checkout/order-done.png';
+import Success from '../Checkout/success.png';
 
 const Checkout = () => {   
-    
-  // TODO: get ingredients from localstorage
-    const {pizzas, toggleIngredients} = useContext(PizzaContext);
-    const [success, setSuccess] = useState(false);
-    const [currentTime, setCurrentTime] = useState('');
+    const { pizzas } = useContext(PizzaContext);
+    const [ success, setSuccess ] = useState(false);
+    const [ currentTime, setCurrentTime ] = useState('');
     
     const getConfirmationTime = () => {
         setSuccess(true);
@@ -59,36 +57,37 @@ const Checkout = () => {
                             </div>
                         </div>
 
-                        <div className="confirmation">
-                            <h1 className='head-text'>
-                                Your order:
-                            </h1>
-                            <table className='ingredients-table'>
-                                <tbody>
-                                    { Object.keys(pizzas).map((ingredient) => {
-                                        return (
-                                            pizzas[ingredient] && (
-                                            <tr key={ingredient}>
-                                                <td>
-                                                    {ingredient[0].toUpperCase()}
-                                                    {ingredient.substring(1)}
-                                                </td>
-                                                <td>
-                                                    { cheeseImages.map((image) => {
-                                                        if (image.name === ingredient) {
-                                                            return ("$" + image.price)
-                                                        }
-                                                    }) }
-                                                </td>
-                                            </tr>
+                        <div className="confirmation-container">
+                            <div className="confirmation">
+                                <h1 className='head-text'>
+                                    Your order:
+                                </h1>
+                                <table className='ingredients-table'>
+                                    <tbody>
+                                        { Object.keys(pizzas).map((ingredient) => {
+                                            return (
+                                                pizzas[ingredient] && (
+                                                <tr key={ingredient}>
+                                                    <td>
+                                                        {ingredient[0].toUpperCase()}
+                                                        {ingredient.substring(1)}
+                                                    </td>
+                                                    <td>
+                                                        { cheeseImages.map((image) => {
+                                                            if (image.name === ingredient) {
+                                                                return ("$" + image.price)
+                                                            }
+                                                        }) }
+                                                    </td>
+                                                </tr>
+                                                )
                                             )
-                                        )
-                                    })}
-                                </tbody>
-                            </table>
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    
                 }
                 { success ? [] :
                 <div className="link-div">
