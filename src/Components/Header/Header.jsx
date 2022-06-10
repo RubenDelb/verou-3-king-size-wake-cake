@@ -1,6 +1,6 @@
 import './Header.scss';
 import { Link } from 'react-router-dom';
-import Logo from "../../assets/logo/pizzaverse.png"
+import Logo from "../../assets/logo/pizzaverse.webp"
 import { useState } from 'react';
 import { HiMenuAlt4, HiX } from  'react-icons/hi';
 import { motion } from 'framer-motion'
