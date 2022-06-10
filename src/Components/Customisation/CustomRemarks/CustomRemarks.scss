@@ -1,28 +1,27 @@
 .remarks {
     display: flex;
     flex-direction: column;
-    margin-right: 20%;
+    // margin-right: 20%;
     margin-top: 5%;
+    margin: 5% 4rem 0 1rem;
+    flex: auto;
 
     h2 {
         text-align: center;
+        font-size: xx-large;
+        margin-bottom: 2rem;
     }
     #textArea {
         border-radius: 10px;
         padding: 5px;
-        
     }
 }
 
 @media screen and (max-width: 800px) {
     .remarks {
-        justify-content: center;
-        margin: 10%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .remarks {
-        margin: 15%;
+        margin-left: 4rem;
+        h2{
+                font-size: x-large;
+        }
     }
 }
