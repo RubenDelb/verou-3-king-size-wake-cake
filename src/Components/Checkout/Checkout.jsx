@@ -5,8 +5,8 @@ import PizzaContext from '../../PizzaContext';
 import './Checkout.scss';
 import { IoIosArrowBack, IoMdCheckmark } from 'react-icons/io';
 import cheeseImages from '../../constants/cheeseImages';
-import OrderConf from '../Checkout/order-done.png';
-import Success from '../Checkout/success.png';
+import OrderConf from '../Checkout/order-done.webp';
+import Success from '../Checkout/success.webp';
 
 const Checkout = () => {   
     const { pizzas } = useContext(PizzaContext);
@@ -30,9 +30,9 @@ const Checkout = () => {
                     <div className='success-container'>
                         <div className="wrapper">
                             <div className='success-box'>
-                                <img src={Success} alt="" height="100%" width="100%" />
+                                <img src={Success} alt="" height="100px" width="100px" />
                                 <h2 className='success-title'>We have successfully received your order. <br /> Thank you!</h2>
-                                <img src={OrderConf} alt="" height="100%" width="100%" />
+                                <img src={OrderConf} alt="" height="250px" width="250px" />
                                 <h4>Your order will be ready for pick-up @ {currentTime}</h4>
                             </div>
                         </div>
