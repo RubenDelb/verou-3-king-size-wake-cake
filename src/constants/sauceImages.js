@@ -1,11 +1,11 @@
-import CurrySauce from '../assets/Sauce/curry.png';
-import PestoSauce from '../assets/Sauce/pesto.png';
-import TomatoSauce from '../assets/Sauce/tomato-sauce.png';
-import SpicySauce from '../assets/Sauce/spicy.png';
-import BarbequeSauce from '../assets/Sauce/barbeque.png';
-import GarlicSauce from '../assets/Sauce/garlic.png'
-import DeepPan from '../assets/Base/thick-dough.png';
-import Authentic from '../assets/Base/thin-dough.png';
+import CurrySauce from '../assets/Sauce/curry.webp';
+import PestoSauce from '../assets/Sauce/pesto.webp';
+import TomatoSauce from '../assets/Sauce/tomato-sauce.webp';
+import SpicySauce from '../assets/Sauce/spicy.webp';
+import BarbequeSauce from '../assets/Sauce/barbeque.webp';
+import GarlicSauce from '../assets/Sauce/garlic.webp'
+import DeepPan from '../assets/Base/thick-dough.webp';
+import Authentic from '../assets/Base/thin-dough.webp';
 
 export default [
     { src: TomatoSauce, src2: TomatoSauce, name: "tomatoSauce", zIndex: "z2", category: "sauce", price: 0 },
