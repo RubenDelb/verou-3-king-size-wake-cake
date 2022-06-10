@@ -1,6 +1,9 @@
-# PizzaVerse
+# PizzaVerse :pizza:
 
-Tired of having the same pizza options? PizzaVerse is here to change that. In PizzaVerse you'll be able to customize your pizza to your own desire. 5 simple steps, confirm your selection and voila! Your pizza will be ready in 30 mts. for pickup.
+Tired of having the same pizza options? PizzaVerse is here to change that. In PizzaVerse you'll be able to customize your pizza to your own desires. 
+
+in five simple steps you can compose your pizza from scratch, confirm your selection <i>"et voilà!"</i>  
+30 minutes later, your pizza will be ready for pickup! :heart_eyes:
 
 ## Technology
 
@@ -8,9 +11,12 @@ We used React.Js, React-Router-Dom, React-Icon, Framer-motion, Swiper and Sass-l
 
 ## Implementation
 
-We render our functionally in components, where the hook useContext allowed to share the desire data between the components saved in the local storage of the user.
+We render everything functionally with different React-components, and with the use of "useContext" we are able to share the needed information between all our components.
+
+All the selected ingredients will be saved in the local-storage of the user.
 
 ## Authors
+
 - [@Dery Lantigua](https://github.com/derylan)
 - [@Ruben Delbrassine](https://github.com/RubenDelb)
 
