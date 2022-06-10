@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.scss';
 import { Header, Footer, Home } from './Components';
 import { Routes, Route } from 'react-router-dom';
