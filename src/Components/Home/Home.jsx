@@ -2,13 +2,18 @@ import stepsImages from '../../constants/stepsImages';
 import './Home.scss';
 import homePizzas from '../../constants/homePizzas';
 import SwiperCarousel from '../SwiperCarousel/SwiperCarousel';
-
+import { Link } from 'react-router-dom';
+import { GiFullPizza } from 'react-icons/gi';
 
 const Home = () => {
     return (
         <>
         <div className='home'>
             <SwiperCarousel />
+                <Link to={"/custombase"}>
+                    <button class="prism"><h1>Enter the PizzaVerse! <GiFullPizza /></h1></button>
+                    
+                </Link>
             <div className='howTo'>
                 <h2>Need inspiration? Take a look...</h2> 
                 <br />
