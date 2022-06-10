@@ -13,7 +13,16 @@ const Checkout = () => {
   // TODO: get ingredients from localstorage
     const {pizzas, toggleIngredients} = useContext(PizzaContext);
     const [success, setSuccess] = useState(false);
-    const navigate = useNavigate();
+    const [currentTime, setCurrentTime] = useState('');
+    
+    const getConfirmationTime = () => {
+        setSuccess(true);
+        const date = new Date();
+        date.setMinutes(date.getMinutes() + 30);
+        const hour = date.getHours();
+        const minutes = date.getMinutes();
+        setCurrentTime(hour + ":" + minutes)
+    }
 
     return (
         <div className='checkout'>
@@ -24,7 +33,7 @@ const Checkout = () => {
                             <img src={Success} alt="" height="100%" width="100%" />
                             <h2 className='success-title'>We have successfully received you order. <br /> Thank you!</h2>
                             <img src={OrderConf} alt="" height="100%" width="100%" />
-                            <h4>Your order will be ready for pick-up @ </h4>
+                            <h4>Your order will be ready for pick-up @ {currentTime}</h4>
                         </div>
                     </div>
                     : // ELSE show
@@ -87,7 +96,7 @@ const Checkout = () => {
                         <IoIosArrowBack className='arrow-back' />
                         Go Back  
                     </Link>
-                    <Link to={"/checkout"} className='link' onClick={() => setSuccess(true)}>
+                    <Link to={"/checkout"} className='link' onClick={getConfirmationTime}>
                         Confirm
                         <IoMdCheckmark className='arrow-next' />
                     </Link>
