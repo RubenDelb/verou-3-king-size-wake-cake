@@ -8,7 +8,7 @@ We used React.Js, React-Router-Dom, React-Icon, Framer-motion, Swiper and Sass-l
 
 ## Implementation
 
-We render our functionally in components, where the hook useContext allowed to share the desire data between the components save in the local storage of the user.
+We render our functionally in components, where the hook useContext allowed to share the desire data between the components saved in the local storage of the user.
 
 ## Authors
 - [@Dery Lantigua](https://github.com/derylan)
