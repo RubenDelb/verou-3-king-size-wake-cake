@@ -12,6 +12,7 @@ const Checkout = () => {
     const { pizzas } = useContext(PizzaContext);
     const [ success, setSuccess ] = useState(false);
     const [ currentTime, setCurrentTime ] = useState('');
+    let totalPrice = 0;
     
     const getConfirmationTime = () => {
         setSuccess(true);
@@ -27,11 +28,13 @@ const Checkout = () => {
             <div className='checkout-container'>
                 { success ? // If confirm is clicked then show
                     <div className='success-container'>
-                        <div className='success-box'>
-                            <img src={Success} alt="" height="100%" width="100%" />
-                            <h2 className='success-title'>We have successfully received you order. <br /> Thank you!</h2>
-                            <img src={OrderConf} alt="" height="100%" width="100%" />
-                            <h4>Your order will be ready for pick-up @ {currentTime}</h4>
+                        <div className="wrapper">
+                            <div className='success-box'>
+                                <img src={Success} alt="" height="100%" width="100%" />
+                                <h2 className='success-title'>We have successfully received your order. <br /> Thank you!</h2>
+                                <img src={OrderConf} alt="" height="100%" width="100%" />
+                                <h4>Your order will be ready for pick-up @ {currentTime}</h4>
+                            </div>
                         </div>
                     </div>
                     : // ELSE show
@@ -75,6 +78,7 @@ const Checkout = () => {
                                                     <td>
                                                         { cheeseImages.map((image) => {
                                                             if (image.name === ingredient) {
+                                                                totalPrice += image.price
                                                                 return ("$" + image.price)
                                                             }
                                                         }) }
@@ -83,6 +87,14 @@ const Checkout = () => {
                                                 )
                                             )
                                         })}
+                                        <tr className='total-price'>
+                                            <td>
+                                                Total Price
+                                            </td>
+                                            <td>
+                                                ${totalPrice}
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
