@@ -13,16 +13,16 @@ const Header = () => {
             <div className='logo'>
                 <Link to={"/"} ><img src={Logo} alt="PizzaVerse-logo" height="100%" width="100%"/></Link> 
             </div>
-            <button className='hamburger' id='hamburger'>
+            <button className='hamburger' id='hamburger' aria-label="Open the menu">
                 <motion.div 
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.6 }}
                     >
                 {toggle ? (
                     
-                        <HiX onClick={() => setToggle(false)} />
+                        <HiX onClick={() => setToggle(false)} aria-hidden="true" />
                 ) : (
-                        <HiMenuAlt4 onClick={() => setToggle(true)}/>
+                        <HiMenuAlt4 onClick={() => setToggle(true)} aria-hidden="true"/>
                     
                 )}
                 </motion.div>
