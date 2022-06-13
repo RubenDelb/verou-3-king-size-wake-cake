@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavigationDots from '../../NavigationDots';
 import './CustomRemarks.scss';
 import { useContext } from 'react';
@@ -8,8 +8,7 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { motion } from 'framer-motion';
 
 const CustomRemarks = ({idName}) => {
-    let navigate = useNavigate();
-    const {pizzas} = useContext(PizzaContext);
+    const { pizzas } = useContext(PizzaContext);
 
     return (
         <>
