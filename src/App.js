@@ -1,10 +1,8 @@
 import './App.scss';
-import { Header, Footer, Home } from './Components';
+import { Header, Footer, Home, Checkout } from './Components';
 import { Routes, Route } from 'react-router-dom';
 import { CustomBase, CustomCheese, CustomRemarks, CustomSauce, CustomTopping } from './Components/Customisation';
-import Checkout from './Components/Checkout/Checkout'
 import { PizzaProvider } from './PizzaContext';
-
 
 
 const App = () => {
