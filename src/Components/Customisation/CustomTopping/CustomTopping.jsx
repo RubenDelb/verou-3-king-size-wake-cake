@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 const CustomTopping = ({idName}) => {
-    const {pizzas, toggleIngredients} = useContext(PizzaContext);
+    const { pizzas, toggleIngredients } = useContext(PizzaContext);
 
     return (
         <>
@@ -40,7 +40,7 @@ const CustomTopping = ({idName}) => {
                 {ingredientsImages.map((ingredient) => {
                     return (
                         ingredient.category === "topping" && (
-                            <Checkbox item={ingredient} toggleIngredients={toggleIngredients} />
+                            <Checkbox item={ingredient} />
                         ) 
                     )
                 })}
