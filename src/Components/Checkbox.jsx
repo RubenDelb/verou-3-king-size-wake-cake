@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import PizzaContext from "../PizzaContext";
 
-const Checkbox = ({ item, toggleIngredients }) => {
-    const { pizzas } = useContext(PizzaContext);
+const Checkbox = ({ item }) => {
+    const { pizzas, toggleIngredients } = useContext(PizzaContext);
 
 
     return (
