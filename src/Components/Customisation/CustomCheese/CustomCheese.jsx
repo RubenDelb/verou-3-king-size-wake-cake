@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const CustomCheese = ({idName}) => {
-    const {pizzas, toggleIngredients} = useContext(PizzaContext);
+    const { pizzas } = useContext(PizzaContext);
 
     return (
         <>
@@ -41,7 +41,7 @@ const CustomCheese = ({idName}) => {
                     return (
                         <>
                             { cheese.category === "cheese" && (
-                                <Checkbox item={cheese} toggleIngredients={toggleIngredients} />
+                                <Checkbox item={cheese} />
                             ) }
                         </>
                     )
