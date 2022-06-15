@@ -35,7 +35,7 @@ const CustomRemarks = ({idName}) => {
             </div>
             <div className='remarks'>
                 <h2>Any remarks?</h2>
-                <textarea name="remarks" id="textArea" cols="45" rows="10"></textarea>
+                <textarea name="remarks" id="textArea" cols="25" rows="8"></textarea>
             </div>
             
         </div>
