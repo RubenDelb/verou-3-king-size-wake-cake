@@ -5,7 +5,8 @@ Tired of having the same pizza options? PizzaVerse is here to change that. In Pi
 in five simple steps you can compose your pizza from scratch, confirm your selection <i>"et voilà!"</i>  
 30 minutes later, your pizza will be ready for pickup! :heart_eyes:
 
-The deployed version of PizzaVerse: https://monumental-peony-05fa8c.netlify.app/ 
+ [Click Here](https://pizzaverse.netlify.app/ ) for the deployed version of PizzaVerse!
+<!-- https://pizzaverse.netlify.app/  -->
 
 ## Technology
 
